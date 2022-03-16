@@ -17,10 +17,10 @@ protocol MovieTableViewCellProtocol {
 
 class MovieTableViewCell: UITableViewCell {
         
-    @IBOutlet weak var movieIMDBRating: UILabel!
-    @IBOutlet weak var movieCrew: UILabel!
-    @IBOutlet weak var movieTitle: UILabel!
-    @IBOutlet weak var movieImage: UIImageView!
+    @IBOutlet private weak var movieIMDBRating: UILabel!
+    @IBOutlet private weak var movieCrew: UILabel!
+    @IBOutlet private weak var movieTitle: UILabel!
+    @IBOutlet private weak var movieImage: UIImageView!
     
     func configureTableCell(with movieData: MovieTableViewCellProtocol) {
         self.movieIMDBRating.text = movieData.movieIMDBRating
