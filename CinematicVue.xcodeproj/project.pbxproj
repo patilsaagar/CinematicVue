@@ -20,11 +20,13 @@
 		88C5C78D27E1270B005368CA /* HomeViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C5C78C27E1270B005368CA /* HomeViewControllerViewModel.swift */; };
 		88C5C78F27E12840005368CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C5C78E27E12840005368CA /* Constants.swift */; };
 		88C5C79527E154EA005368CA /* MovieTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C5C79427E154EA005368CA /* MovieTableCellViewModel.swift */; };
-		88C5C79C27E160BE005368CA /* UIImage+ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C5C79B27E160BE005368CA /* UIImage+ImageDownloader.swift */; };
 		88F0E2C027E22642004F1765 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F0E2BF27E22642004F1765 /* UIViewController+Alert.swift */; };
+		F5FD5E7AB519823B6EB95998 /* Pods_CinematicVue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B1CC61BE9ECB7F2F99230C /* Pods_CinematicVue.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6FFEEE3B3E513F180711C9DE /* Pods-CinematicVue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CinematicVue.debug.xcconfig"; path = "Target Support Files/Pods-CinematicVue/Pods-CinematicVue.debug.xcconfig"; sourceTree = "<group>"; };
+		73B1CC61BE9ECB7F2F99230C /* Pods_CinematicVue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CinematicVue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C5C76D27E11C98005368CA /* CinematicVue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinematicVue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C5C77027E11C98005368CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88C5C77227E11C98005368CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,8 +42,8 @@
 		88C5C78C27E1270B005368CA /* HomeViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerViewModel.swift; sourceTree = "<group>"; };
 		88C5C78E27E12840005368CA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		88C5C79427E154EA005368CA /* MovieTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableCellViewModel.swift; sourceTree = "<group>"; };
-		88C5C79B27E160BE005368CA /* UIImage+ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageDownloader.swift"; sourceTree = "<group>"; };
 		88F0E2BF27E22642004F1765 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		C1EED6926EC9A82D1B242C1C /* Pods-CinematicVue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CinematicVue.release.xcconfig"; path = "Target Support Files/Pods-CinematicVue/Pods-CinematicVue.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5FD5E7AB519823B6EB95998 /* Pods_CinematicVue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +63,8 @@
 			children = (
 				88C5C76F27E11C98005368CA /* CinematicVue */,
 				88C5C76E27E11C98005368CA /* Products */,
+				EF59553B6E15B5439EED92FF /* Pods */,
+				BB4789F213F5CD11C6DC006F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,10 +141,26 @@
 		88C5C79D27E16130005368CA /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				88C5C79B27E160BE005368CA /* UIImage+ImageDownloader.swift */,
 				88F0E2BF27E22642004F1765 /* UIViewController+Alert.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		BB4789F213F5CD11C6DC006F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73B1CC61BE9ECB7F2F99230C /* Pods_CinematicVue.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF59553B6E15B5439EED92FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6FFEEE3B3E513F180711C9DE /* Pods-CinematicVue.debug.xcconfig */,
+				C1EED6926EC9A82D1B242C1C /* Pods-CinematicVue.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88C5C78127E11C99005368CA /* Build configuration list for PBXNativeTarget "CinematicVue" */;
 			buildPhases = (
+				AECC23B4035DC41869A8BD46 /* [CP] Check Pods Manifest.lock */,
 				88C5C76927E11C98005368CA /* Sources */,
 				88C5C76A27E11C98005368CA /* Frameworks */,
 				88C5C76B27E11C98005368CA /* Resources */,
+				E56E6C60BCD6AC7A5881CB6D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,6 +232,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AECC23B4035DC41869A8BD46 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CinematicVue-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E56E6C60BCD6AC7A5881CB6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CinematicVue/Pods-CinematicVue-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CinematicVue/Pods-CinematicVue-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CinematicVue/Pods-CinematicVue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		88C5C76927E11C98005368CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -221,7 +286,6 @@
 				88F0E2C027E22642004F1765 /* UIViewController+Alert.swift in Sources */,
 				88C5C78627E11DEC005368CA /* MovieTableViewCell.swift in Sources */,
 				88C5C78B27E12504005368CA /* MoviewModel.swift in Sources */,
-				88C5C79C27E160BE005368CA /* UIImage+ImageDownloader.swift in Sources */,
 				88C5C77327E11C98005368CA /* SceneDelegate.swift in Sources */,
 				88C5C78D27E1270B005368CA /* HomeViewControllerViewModel.swift in Sources */,
 				88C5C78F27E12840005368CA /* Constants.swift in Sources */,
@@ -368,6 +432,7 @@
 		};
 		88C5C78227E11C99005368CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FFEEE3B3E513F180711C9DE /* Pods-CinematicVue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -396,6 +461,7 @@
 		};
 		88C5C78327E11C99005368CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1EED6926EC9A82D1B242C1C /* Pods-CinematicVue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

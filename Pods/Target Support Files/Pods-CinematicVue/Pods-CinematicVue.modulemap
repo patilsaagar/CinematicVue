@@ -1,0 +1,6 @@
+framework module Pods_CinematicVue {
+  umbrella header "Pods-CinematicVue-umbrella.h"
+
+  export *
+  module * { export * }
+}

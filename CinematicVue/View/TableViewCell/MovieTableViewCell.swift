@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 protocol MovieTableViewCellProtocol {
     var movieIMDBRating: String { get }
@@ -25,6 +26,9 @@ class MovieTableViewCell: UITableViewCell {
         self.movieIMDBRating.text = movieData.movieIMDBRating
         self.movieTitle.text = movieData.movieTitle
         self.movieCrew.text = movieData.movieCrew
-        self.movieImage.downloaded(from: movieData.movieImage)
+        
+        if let movieImageURL = URL(string: movieData.movieImage) {
+            self.movieImage.sd_setImage(with: movieImageURL, completed: nil)
+        }
     }
 }
