@@ -21,6 +21,7 @@
 		88C5C78F27E12840005368CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C5C78E27E12840005368CA /* Constants.swift */; };
 		88C5C79527E154EA005368CA /* MovieTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C5C79427E154EA005368CA /* MovieTableCellViewModel.swift */; };
 		88C5C79C27E160BE005368CA /* UIImage+ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C5C79B27E160BE005368CA /* UIImage+ImageDownloader.swift */; };
+		88F0E2C027E22642004F1765 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F0E2BF27E22642004F1765 /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		88C5C78E27E12840005368CA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		88C5C79427E154EA005368CA /* MovieTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableCellViewModel.swift; sourceTree = "<group>"; };
 		88C5C79B27E160BE005368CA /* UIImage+ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageDownloader.swift"; sourceTree = "<group>"; };
+		88F0E2BF27E22642004F1765 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				88C5C79B27E160BE005368CA /* UIImage+ImageDownloader.swift */,
+				88F0E2BF27E22642004F1765 /* UIViewController+Alert.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				88C5C77127E11C98005368CA /* AppDelegate.swift in Sources */,
 				88C5C78927E120F3005368CA /* APIManager.swift in Sources */,
 				88C5C79527E154EA005368CA /* MovieTableCellViewModel.swift in Sources */,
+				88F0E2C027E22642004F1765 /* UIViewController+Alert.swift in Sources */,
 				88C5C78627E11DEC005368CA /* MovieTableViewCell.swift in Sources */,
 				88C5C78B27E12504005368CA /* MoviewModel.swift in Sources */,
 				88C5C79C27E160BE005368CA /* UIImage+ImageDownloader.swift in Sources */,

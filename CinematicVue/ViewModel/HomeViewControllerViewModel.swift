@@ -9,6 +9,7 @@ import Foundation
 
 protocol HomeViewControllerViewModelProtocol: AnyObject {
     func didGetMovieData(movieData: [MovieDetails])
+    func didGetError(errorMessage: String)
 }
 
 class HomeViewControllerViewModel {
@@ -21,7 +22,7 @@ class HomeViewControllerViewModel {
             case .success(let movieDetails) :
                 self.delegate?.didGetMovieData(movieData: movieDetails.items)
             case .failure(_):
-                print("")
+                self.delegate?.didGetError(errorMessage: Constants.movieFetchingError)
             }
         }
     }

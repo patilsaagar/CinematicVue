@@ -15,6 +15,8 @@ class HomeViewController: UIViewController, HomeViewControllerViewModelProtocol 
         didSet {
             let nibName = UINib(nibName: Constants.movieTableViewCellIdentifier, bundle: nil)
             movieTableView.register(nibName, forCellReuseIdentifier: Constants.movieTableViewCellIdentifier)
+            movieTableView.estimatedRowHeight = movieTableView.rowHeight
+            movieTableView.rowHeight = UITableView.automaticDimension
         }
     }
 
@@ -31,6 +33,10 @@ class HomeViewController: UIViewController, HomeViewControllerViewModelProtocol 
         DispatchQueue.main.async {
             self.movieTableView.reloadData()
         }
+    }
+    
+    func didGetError(errorMessage: String) {
+        self.showAlert(alertTitle: "Error", errorMessage: errorMessage)
     }
 }
 

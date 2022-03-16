@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3c9-Jd-7WB">
-                        <rect key="frame" x="0.0" y="16" width="150" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="144"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="vtu-vd-Xxz"/>
                         </constraints>
@@ -75,7 +75,7 @@
                     <constraint firstItem="WGj-PM-VCI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OOV-hf-9yR"/>
                     <constraint firstItem="3c9-Jd-7WB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hYr-6P-w1v"/>
                     <constraint firstAttribute="bottom" secondItem="3c9-Jd-7WB" secondAttribute="bottom" constant="16" id="oU0-S9-bZx"/>
-                    <constraint firstItem="3c9-Jd-7WB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="sY1-FY-xGO"/>
+                    <constraint firstItem="3c9-Jd-7WB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sY1-FY-xGO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -13,4 +13,5 @@ struct Constants {
     static let homeViewControllerTitle = "Movies"
     static let movieTableViewCellIdentifier = "MovieTableViewCell"
     static let tableviewCellDequeueError = "Error while dequeuing cell"
+    static let movieFetchingError = "Error while downloading Movie Details"
 }
