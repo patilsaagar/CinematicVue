@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88B3B00127E5072D006952AD /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3B00027E5072D006952AD /* UIViewController+Alert.swift */; };
 		88C5C77127E11C98005368CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C5C77027E11C98005368CA /* AppDelegate.swift */; };
 		88C5C77327E11C98005368CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C5C77227E11C98005368CA /* SceneDelegate.swift */; };
 		88C5C77527E11C98005368CA /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C5C77427E11C98005368CA /* MovieViewController.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		6FFEEE3B3E513F180711C9DE /* Pods-CinematicVue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CinematicVue.debug.xcconfig"; path = "Target Support Files/Pods-CinematicVue/Pods-CinematicVue.debug.xcconfig"; sourceTree = "<group>"; };
 		73B1CC61BE9ECB7F2F99230C /* Pods_CinematicVue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CinematicVue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88B3B00027E5072D006952AD /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		88C5C76D27E11C98005368CA /* CinematicVue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinematicVue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C5C77027E11C98005368CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88C5C77227E11C98005368CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		88B3AFFF27E5069F006952AD /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				88B3B00027E5072D006952AD /* UIViewController+Alert.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				88C5C78927E120F3005368CA /* APIManager.swift in Sources */,
 				88C5C79527E154EA005368CA /* MovieTableCellModel.swift in Sources */,
 				88C5C78627E11DEC005368CA /* MovieTableViewCell.swift in Sources */,
+				88B3B00127E5072D006952AD /* UIViewController+Alert.swift in Sources */,
 				88C5C78B27E12504005368CA /* MoviewModel.swift in Sources */,
 				88C5C77327E11C98005368CA /* SceneDelegate.swift in Sources */,
 				88C5C78D27E1270B005368CA /* MovieViewControllerViewModel.swift in Sources */,
