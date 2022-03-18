@@ -8,6 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
     lazy private var viewModel = {
         MovieViewControllerViewModel()
     }()

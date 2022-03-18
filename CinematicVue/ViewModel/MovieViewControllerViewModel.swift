@@ -11,7 +11,7 @@ class MovieViewControllerViewModel {
     var reloadTableView: (() -> Void)?
     var movieFetchingError: ((String) -> Void)?
     
-    var movieTableCellViewModel = [MovieTableCellModel]() {
+    var movieTableCellViewModel = [MovieTableViewCellProtocol]() {
         didSet {
             reloadTableView?()
         }
@@ -23,7 +23,7 @@ class MovieViewControllerViewModel {
     
     func getMovieData() {
         APIManager.shared.getResponse(urlString: .TopMovies, forType: MovieData.self) { movieDetails in
-            var movieCellModelViewArray = [MovieTableCellModel]()
+            var movieCellModelViewArray = [MovieTableViewCellProtocol]()
             switch movieDetails {
             case .success(let movieDetails) :
                 for movie in movieDetails.items {
@@ -40,11 +40,11 @@ class MovieViewControllerViewModel {
         }
     }
         
-    func getMovieCellDataModel(indexPath: IndexPath) -> MovieTableCellModel {
+    func getMovieCellDataModel(indexPath: IndexPath) -> MovieTableViewCellProtocol {
         return movieTableCellViewModel[indexPath.row]
     }
     
-    private func createCellModel(movie: MovieDetails) -> MovieTableCellModel {
+    private func createCellModel(movie: MovieDetails) -> MovieTableViewCellProtocol {
         return MovieTableCellModel(movieModel: movie)
     }
 }

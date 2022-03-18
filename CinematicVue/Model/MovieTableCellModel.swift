@@ -1,9 +1,16 @@
 //
-//  MovieTableCellModel.swift
+//  MovieTableCellViewModel.swift
 //  CinematicVue
 //
 //  Created by sagar patil on 15/03/2022.
 //
+
+protocol MovieTableViewCellProtocol {
+    var movieIMDBRating: String { get }
+    var movieCrew: String { get }
+    var movieTitle: String { get }
+    var movieImage: String { get }
+}
 
 struct MovieTableCellModel: MovieTableViewCellProtocol {
     var movieImage: String
