@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		86A1792427E939C100F03856 /* MovieResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A1792327E939C100F03856 /* MovieResource.swift */; };
+		864A6E9327EA11240091F273 /* MovieResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864A6E9227EA11240091F273 /* MovieResource.swift */; };
 		88B3B00127E5072D006952AD /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3B00027E5072D006952AD /* UIViewController+Alert.swift */; };
 		88C5C77127E11C98005368CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C5C77027E11C98005368CA /* AppDelegate.swift */; };
 		88C5C77327E11C98005368CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C5C77227E11C98005368CA /* SceneDelegate.swift */; };
@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		6FFEEE3B3E513F180711C9DE /* Pods-CinematicVue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CinematicVue.debug.xcconfig"; path = "Target Support Files/Pods-CinematicVue/Pods-CinematicVue.debug.xcconfig"; sourceTree = "<group>"; };
 		73B1CC61BE9ECB7F2F99230C /* Pods_CinematicVue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CinematicVue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		86A1792327E939C100F03856 /* MovieResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieResource.swift; path = "../../../../../Documents/Logisyntax/MobileApp/Flutter/MarcJrApp/Logisyntax-MarcJr-master/ios/Runner/MovieResource.swift"; sourceTree = "<group>"; };
+		864A6E9227EA11240091F273 /* MovieResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieResource.swift; sourceTree = "<group>"; };
 		88B3B00027E5072D006952AD /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		88C5C76D27E11C98005368CA /* CinematicVue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinematicVue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C5C77027E11C98005368CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,10 +60,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		86A1792227E939AB00F03856 /* Resource */ = {
+		864A6E9127EA11240091F273 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				86A1792327E939C100F03856 /* MovieResource.swift */,
+				864A6E9227EA11240091F273 /* MovieResource.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -97,7 +97,7 @@
 		88C5C76F27E11C98005368CA /* CinematicVue */ = {
 			isa = PBXGroup;
 			children = (
-				86A1792227E939AB00F03856 /* Resource */,
+				864A6E9127EA11240091F273 /* Resource */,
 				88B3AFFF27E5069F006952AD /* Extension */,
 				88C5C79927E15731005368CA /* Utility */,
 				88C5C79827E1572D005368CA /* View */,
@@ -290,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86A1792427E939C100F03856 /* MovieResource.swift in Sources */,
+				864A6E9327EA11240091F273 /* MovieResource.swift in Sources */,
 				88C5C77527E11C98005368CA /* MovieViewController.swift in Sources */,
 				88C5C77127E11C98005368CA /* AppDelegate.swift in Sources */,
 				88C5C78927E120F3005368CA /* APIManager.swift in Sources */,
