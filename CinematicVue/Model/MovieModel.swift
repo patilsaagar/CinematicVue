@@ -1,5 +1,5 @@
 //
-//  MoviewModel.swift
+//  MovieModel.swift
 //  CinematicVue
 //
 //  Created by sagar patil on 15/03/2022.

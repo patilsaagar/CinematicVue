@@ -8,54 +8,59 @@
 import Foundation
 
 class MovieViewControllerViewModel {
-
-    private lazy var movieResource = MovieResource() // not the best approach but fine for now, maybe we can use some creational patterns for this
-
+    
+    private let movieResource: MovieResourceFetchable
+    // not the best approach but fine for now, maybe we can use some creational patterns for this
+    
+    init(movieResource: MovieResourceFetchable) {
+        self.movieResource = movieResource
+    }
     // what's the purpose of this property? can the reload be done in the same function
-    var reloadTableView: (() -> Void)?
-    var movieFetchingError: ((String) -> Void)? // why explicit error closure?
-
+    var bindDataToViewController: (([MovieDetails], String?) -> Void)? // why explicit error closure?
+    
     // what purpose does this property serve?
-    var movieTableCellViewModel = [MovieTableViewCellProtocol]() {
-        didSet { reloadTableView?() }
-    }
-
+    var movieTableCellData = [MovieTableViewCellProtocol]()
+    
     // what purpose does this property serve?
-    var numberOfRows: Int {
-        return self.movieTableCellViewModel.count
+    var numberOfRowForTableView: Int {
+        return self.movieTableCellData.count
     }
-
-    var movieCellModelViewArray = [MovieTableViewCellProtocol]()
+    
     
     func getMovieData() {
-
+        
         movieResource.getMovie(urlString: .TopMovies) { movieResponse in
-
+            
             // for some reason this is bothering me, i guess this is because its a DTO and I don't like this to be done in the view model
             // QUESTION: this model is now tightly coupled to this function, do we want it to be tightly coupled?
             //var movieCellModelViewArray = [MovieTableViewCellProtocol]()
             switch movieResponse {
             case .success(let movieDetails):
                 // extra code inside the case statement is bad
-                self.populateMovieCellModelViewArray(movieDetails: movieDetails!)
-                self.movieTableCellViewModel = self.movieCellModelViewArray
-
+                guard let bindDataToViewController = self.bindDataToViewController,
+                      let movieDetails = movieDetails else { return }
+                
+                bindDataToViewController(movieDetails, nil)
+                
             case .failure(let error):
-                if let movieFetchingError = self.movieFetchingError {
-                    movieFetchingError(error.localizedDescription)
-                }
+                guard let bindDataToViewController = self.bindDataToViewController else { return }
+                bindDataToViewController([], error.localizedDescription)
             }
         }
     }
-
-    private func populateMovieCellModelViewArray(movieDetails: [MovieDetails]) {
+    
+    func getMovieCellDataModel(indexPath: IndexPath) -> MovieTableViewCellProtocol {
+        return movieTableCellData[indexPath.row]
+    }
+    
+    func populateMovieCellModelViewArray(movieDetails: [MovieDetails]) {
+        var movieCellModelViewArray = [MovieTableViewCellProtocol]()
+        
         for movie in movieDetails {
             movieCellModelViewArray.append(self.createCellModel(movie: movie))
         }
-    }
         
-    func getMovieCellDataModel(indexPath: IndexPath) -> MovieTableViewCellProtocol {
-        return movieTableCellViewModel[indexPath.row]
+        self.movieTableCellData = movieCellModelViewArray
     }
     
     private func createCellModel(movie: MovieDetails) -> MovieTableViewCellProtocol {

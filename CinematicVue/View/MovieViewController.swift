@@ -8,10 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
-    lazy private var viewModel = {
-        MovieViewControllerViewModel()
-    }()
+    var viewModel: MovieViewControllerViewModel?
     
     @IBOutlet weak var movieTableView: UITableView! {
         didSet {
@@ -25,9 +22,22 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = Constants.homeViewControllerTitle
-        viewModel.getMovieData()
         
-        viewModel.reloadTableView = {[weak self] in
+        self.setupBinding()
+    }
+    
+    private func setupBinding() {
+        let movieResource = MovieResource()
+        viewModel = MovieViewControllerViewModel(movieResource: movieResource)
+        
+        guard let viewModel = viewModel else { return }
+        viewModel.getMovieData()
+
+        viewModel.bindDataToViewController = {[weak self] movieDetails, errorString in
+            
+            if errorString?.count == 0 { return }
+            
+            self?.viewModel?.populateMovieCellModelViewArray(movieDetails: movieDetails)
             DispatchQueue.main.async {
                 self?.movieTableView.reloadData()
             }
@@ -37,11 +47,14 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfRows
+        guard let viewModel = viewModel else { return 0 }
+        
+        return viewModel.numberOfRowForTableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let movieCell = tableView.dequeueReusableCell(withIdentifier: Constants.movieTableViewCellIdentifier, for: indexPath) as? MovieTableViewCell else {
+        guard let movieCell = tableView.dequeueReusableCell(withIdentifier: Constants.movieTableViewCellIdentifier, for: indexPath) as? MovieTableViewCell,
+                let viewModel = viewModel else {
             fatalError(Constants.tableviewCellDequeueError)
         }
 

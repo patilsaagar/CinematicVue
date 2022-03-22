@@ -7,9 +7,11 @@
 
 import Foundation
 
-class MovieResource {
+protocol MovieResourceFetchable {
+    func getMovie(urlString: EndpointURL, completion: @escaping (Result<[MovieDetails]?, ApiError>) -> Void)
+}
 
-    // I am not a big fan of the result type as it creates those switch cases but it's fine
+class MovieResource: MovieResourceFetchable {
 
     func getMovie(urlString: EndpointURL, completion: @escaping (Result<[MovieDetails]?, ApiError>) -> Void) {
 
@@ -19,7 +21,7 @@ class MovieResource {
         APIManager.shared.getResponse(request: getMovieRequest, forType: MovieData.self) { movieResponse in
             switch movieResponse{
             case .success(let movies):
-                completion(.success(movies?.items))
+                completion(.success(movies.items))
 
             case .failure(let failure):
                 completion(.failure(failure))
